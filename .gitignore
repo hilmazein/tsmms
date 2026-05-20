@@ -1,0 +1,14 @@
+node_modules
+dist
+.env
+.env.*
+coverage
+.vscode
+.idea
+*.log
+
+frontend/node_modules
+frontend/dist
+
+backend/tmp
+backend/bin
