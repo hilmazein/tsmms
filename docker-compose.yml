@@ -21,9 +21,7 @@ services:
     networks:
       - internal
   backend:
-    build:
-      context: ./backend
-      dockerfile: ../backend.Dockerfile
+    image: hilmazein/tsmms-backend:latest
     container_name: ts-dashboard-backend
     restart: unless-stopped
     depends_on:
@@ -53,11 +51,7 @@ services:
       start_period: 10s
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: ../frontend.Dockerfile
-      args:
-        VITE_API_BASE: /api
+    image: hilmazein/tsmms-frontend:latest
     container_name: ts-dashboard-frontend
     restart: unless-stopped
     depends_on:
